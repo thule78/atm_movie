@@ -1,0 +1,47 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "atm-movie",
+          "appId": "1:519712667928:android:e7b196327e1821ab8f466d",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "atm-movie",
+          "appId": "1:519712667928:ios:91f6a3bfb7bc2a6e8f466d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "atm-movie",
+          "appId": "1:519712667928:ios:91f6a3bfb7bc2a6e8f466d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "atm-movie",
+          "configurations": {
+            "android": "1:519712667928:android:e7b196327e1821ab8f466d",
+            "ios": "1:519712667928:ios:91f6a3bfb7bc2a6e8f466d",
+            "macos": "1:519712667928:ios:91f6a3bfb7bc2a6e8f466d",
+            "web": "1:519712667928:web:ee637d369f74c0768f466d",
+            "windows": "1:519712667928:web:0dca10941e91d9508f466d"
+          }
+        }
+      }
+    }
+  }
+}

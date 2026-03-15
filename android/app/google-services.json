@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "519712667928",
+    "project_id": "atm-movie",
+    "storage_bucket": "atm-movie.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519712667928:android:e7b196327e1821ab8f466d",
+        "android_client_info": {
+          "package_name": "com.example.atm_movie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519712667928-4aoh5fjc1lkb9sioin3rjia6rp89bdsk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHLp8_0HFNMLFRIxPgSSv_x1l2FCjtj_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519712667928-4aoh5fjc1lkb9sioin3rjia6rp89bdsk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "519712667928-22dag1hbpipob8lpq50hf1ihvlrkioh8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.atmMovie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

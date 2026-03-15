@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>519712667928-22dag1hbpipob8lpq50hf1ihvlrkioh8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.519712667928-22dag1hbpipob8lpq50hf1ihvlrkioh8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAXn8a0fG55Dnakm5kr6c_KtkXG154BeSQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>519712667928</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.atmMovie</string>
+	<key>PROJECT_ID</key>
+	<string>atm-movie</string>
+	<key>STORAGE_BUCKET</key>
+	<string>atm-movie.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:519712667928:ios:91f6a3bfb7bc2a6e8f466d</string>
+</dict>
+</plist>

@@ -1,0 +1,73 @@
+# tasks/todo.md
+
+- [x] Review the project spec, current Flutter starter code, and architecture rules.
+- [x] Replace the starter counter app with an `atm_movie` app shell aligned to the movie trailer review flow.
+- [x] Add a dedicated `router/` setup with an initial splash route and named navigation targets.
+- [x] Implement a persistent bottom navigation `RootScreen` using `IndexedStack`.
+- [x] Build first-pass feature screens for Splash, Welcome, Auth, Home, Explore, My List, Profile, and Movie Detail.
+- [x] Create reusable presentation models and mock data to support the UI without blocking on backend integration.
+- [x] Apply the light theme direction: white surfaces, red actions, soft gray borders, dark text.
+- [x] Run verification with Flutter analysis and fix any issues.
+- [x] Replace mock movie content with TMDb-backed movie lists and poster URLs.
+- [x] Load API configuration from `.env` at app startup.
+- [x] Add Provider-based movie state so async loading stays localized to feature screens.
+- [x] Update Home, Explore, My List, and Movie Detail to render real poster and backdrop images with fallbacks.
+- [x] Re-run verification after the API integration.
+- [x] Remove unsafe placeholder auth behavior that currently bypasses Firebase validation.
+- [x] Keep guest access, but block email/Google entry until Firebase Auth is actually wired.
+- [x] Re-run verification after the auth flow correction.
+- [x] Initialize Firebase in app startup and restore the real Firebase options model.
+- [x] Add an auth repository/provider for email sign-in, sign-up, Google sign-in, guest sign-in, and logout.
+- [x] Route Splash by real auth session state instead of always going to Welcome.
+- [x] Update Auth and Profile screens to use Firebase-backed state and errors.
+- [x] Re-run verification after Firebase auth integration.
+- [x] Add Firestore-backed profile, watchlist, and comments data flows.
+- [x] Replace local watchlist toggles with Firestore persistence.
+- [x] Implement embedded in-app YouTube trailer playback from TMDb trailer data.
+- [x] Enable editable profile name backed by Firestore.
+- [x] Re-run verification after Firestore and trailer integration.
+- [x] Store explicit id fields in Firestore documents for profile, watchlist, and comments.
+- [x] Re-run verification after the Firestore payload correction.
+- [x] Create a concrete `movies/{movieId}` Firestore document before writing comments.
+- [x] Re-run verification after the comment persistence fix.
+- [x] Allow authenticated writes to the parent `movies/{movieId}` Firestore document for comment metadata.
+- [x] Re-run verification after the Firestore rules update.
+- [x] Detect YouTube embed/player errors and show a clear in-app fallback state.
+- [x] Re-run verification after the trailer player error handling update.
+- [x] Migrate trailer playback from `youtube_player_iframe` to `youtube_player_flutter`.
+- [x] Re-run verification after the player package migration.
+- [x] Replace trailer player helper text with a selectable trailer list below the player.
+- [x] Re-run verification after the trailer screen layout update.
+- [x] Add profile photo upload backed by Firebase Storage and Firestore profile metadata.
+- [x] Build a working My Comments flow that lists the signed-in user's comments with movie titles.
+- [x] Allow users to delete their own comments from the app.
+- [x] Remove the unused Privacy settings item from Profile.
+- [x] Fix failed comment persistence by making the Firestore comment write path consistent and atomic.
+- [x] Add Firebase Storage rules/config so profile photo upload is allowed for the signed-in owner path.
+- [ ] Re-run verification after the comment/profile storage fix.
+- [ ] Re-run verification after the profile/comment feature update.
+
+## Review
+
+- Replaced the Flutter starter template with a feature-first movie trailer review app shell.
+- Added a router-based flow: Splash -> Welcome -> Auth -> RootScreen.
+- Verified persistent bottom navigation with `IndexedStack`.
+- Added a smoke test and fixed a splash timer lifecycle issue exposed by testing.
+- `flutter analyze` passes.
+- `flutter test` passes.
+- TMDb integration now loads real movie lists and poster/backdrop images from the configured API.
+- Provider now owns home feed, search state, detail loading, recommendations, and local watchlist state.
+- Removed the unsafe auth bypass: email and Google no longer navigate into the app without real authentication.
+- Guest access still works, while email and Google clearly report that Firebase Auth is not wired yet.
+- Firebase now initializes at startup, and auth state drives Splash, Auth, and Profile behavior.
+- Email sign-in, sign-up, Google sign-in, anonymous guest sign-in, and logout now route through Firebase-backed provider logic.
+- Firestore now stores user profile data, watchlist movies, and per-movie comments.
+- Movie detail now plays embedded YouTube trailers inside the app when TMDb provides trailer keys.
+- Firestore documents now persist explicit `userId` and `movieId` fields alongside their path-based ids.
+- Comment writes now ensure the parent `movies/{movieId}` document exists before adding comment docs.
+- Firestore rules now allow authenticated creation/update of the parent `movies/{movieId}` document used by comments.
+- Trailer playback now surfaces clear YouTube embed failures for restricted videos instead of leaving a broken player.
+- Trailer playback now uses `youtube_player_flutter`.
+- Trailer screen now shows the trailer list below the player and lets users switch trailers there.
+- Profile now supports photo upload, a My Comments screen with movie titles, and deleting owned comments.
+- Final Flutter verification is still pending because the local sandbox blocked Flutter SDK cache writes and elevated verification was skipped.
