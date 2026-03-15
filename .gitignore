@@ -12,6 +12,8 @@
 .history
 .svn/
 .swiftpm/
+.skills/
+.tasks/
 migrate_working_dir/
 
 # IntelliJ related
